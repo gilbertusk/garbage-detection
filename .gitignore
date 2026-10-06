@@ -1,0 +1,28 @@
+# Data dan artefak besar: tidak masuk git
+data/raw/
+data/real/
+*.pt
+*.pth
+*.ckpt
+runs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Node / Playwright
+node_modules/
+# Disalin dari node_modules oleh `npm run vendor` (CI dan deploy menjalankannya)
+web/vendor/
+test-results/
+playwright-report/
+
+# Editor / OS
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
