@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "epochs": 5,
+  "batch_size": 32,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "label_smoothing": 0.1,
+  "crop_scale_min": 0.5,
+  "rotation_degrees": 15,
+  "color_jitter": 0.3,
+  "workers": 4
+}

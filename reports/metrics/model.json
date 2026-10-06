@@ -1,0 +1,33 @@
+{
+  "labels": [
+    "battery",
+    "biological",
+    "cardboard",
+    "clothes",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "shoes",
+    "trash"
+  ],
+  "threshold": 0.58,
+  "val_accuracy": 0.9506239826370049,
+  "val_macro_f1": 0.9459084095506881,
+  "test_accuracy": 0.9438997821350763,
+  "test_macro_f1": 0.9386109537130436,
+  "test_f1_per_class": {
+    "battery": 0.9777777777777777,
+    "biological": 0.9577464788732394,
+    "cardboard": 0.9358669833729216,
+    "clothes": 0.9912126537785588,
+    "glass": 0.9400386847195358,
+    "metal": 0.9152542372881356,
+    "paper": 0.9086161879895561,
+    "plastic": 0.9156118143459916,
+    "shoes": 0.9768518518518519,
+    "trash": 0.8671328671328671
+  },
+  "test_coverage_at_threshold": 0.9275599128540305,
+  "test_accuracy_at_threshold": 0.9794480328831474
+}
