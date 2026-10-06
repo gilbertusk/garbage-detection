@@ -1,0 +1,32 @@
+{
+  "modelFile": "waste.onnx",
+  "labels": [
+    "battery",
+    "biological",
+    "cardboard",
+    "clothes",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "shoes",
+    "trash"
+  ],
+  "threshold": 0.58,
+  "inputSize": 224,
+  "cropFraction": 0.875,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "metrics": {
+    "testAccuracy": 0.9438997821350763,
+    "testMacroF1": 0.9386109537130436
+  }
+}
