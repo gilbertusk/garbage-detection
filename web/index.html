@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#12332b" />
+    <meta
+      name="description"
+      content="Kenali enam tempat sampah, lihat berapa lama sampah terurai, dan uji foto sampah dengan AI yang berjalan di perangkat Anda."
+    />
+    <title>Pilah: sampah ini masuk ke mana?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#coba">Langsung ke uji foto</a>
+
+    <header class="site-header">
+      <a class="brand" href="#beranda">Pilah</a>
+      <nav aria-label="Bagian halaman">
+        <a href="#tempat">Tempat sampah</a>
+        <a href="#terurai">Lama terurai</a>
+        <a href="#coba">Uji foto</a>
+        <a href="#model">Modelnya</a>
+      </nav>
+    </header>
+
+    <main id="beranda">
+      <section class="hero">
+        <h1>Sampah ini masuk ke mana?</h1>
+        <p class="lede">
+          Sampah yang tercampur hampir selalu berakhir di tempat pembuangan akhir. Sampah yang
+          dipilah dari rumah masih bisa menjadi kompos, bahan baku, atau barang layak pakai.
+          Halaman ini membantu Anda memilahnya, dan menyediakan AI untuk menguji foto sampah.
+        </p>
+        <a class="button" href="#coba">Uji foto sampah</a>
+      </section>
+
+      <section id="tempat" class="bins-section" aria-labelledby="tempat-title">
+        <h2 id="tempat-title">Enam tempat, enam nasib</h2>
+        <p class="section-intro">
+          Warna tempat sampah berbeda antardaerah. Pembagian di bawah adalah yang umum dipakai;
+          ikuti aturan di lingkungan Anda kalau berbeda.
+        </p>
+        <ul class="bins">
+          <li class="bin" style="--bin: var(--organik)">
+            <h3>Organik</h3>
+            <p>Sisa makanan, kulit buah, sayur, daun.</p>
+            <p class="fate">Menjadi kompos.</p>
+          </li>
+          <li class="bin" style="--bin: var(--anorganik)">
+            <h3>Anorganik</h3>
+            <p>Botol plastik, kaca, kaleng, kemasan bersih.</p>
+            <p class="fate">Dilebur menjadi bahan baku.</p>
+          </li>
+          <li class="bin" style="--bin: var(--kertas)">
+            <h3>Kertas</h3>
+            <p>Kertas, koran, kardus yang kering.</p>
+            <p class="fate">Menjadi kertas daur ulang.</p>
+          </li>
+          <li class="bin" style="--bin: var(--b3)">
+            <h3>B3</h3>
+            <p>Baterai, lampu, obat, kaleng semprot.</p>
+            <p class="fate">Diolah khusus agar tidak meracuni tanah.</p>
+          </li>
+          <li class="bin" style="--bin: var(--tekstil)">
+            <h3>Tekstil</h3>
+            <p>Pakaian, sepatu, tas, kain.</p>
+            <p class="fate">Didonasikan atau dijadikan serat.</p>
+          </li>
+          <li class="bin" style="--bin: var(--residu)">
+            <h3>Residu</h3>
+            <p>Popok, tisu bekas, puntung, masker.</p>
+            <p class="fate">Dibuang ke TPA.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="terurai" class="decay" aria-labelledby="terurai-title">
+        <div class="decay-text">
+          <h2 id="terurai-title">Yang dibuang hari ini bisa lebih tua dari cucu Anda</h2>
+          <p>
+            Kulit pisang hilang dalam beberapa minggu. Botol plastik dari hari yang sama masih
+            ada ratusan tahun kemudian. Itu sebabnya keduanya tidak boleh berakhir di tempat
+            yang sama.
+          </p>
+          <p class="note">
+            Angka di samping adalah perkiraan yang umum dikutip. Waktu sebenarnya bergantung
+            pada bahan, suhu, kelembapan, dan apakah sampah tertimbun. Panjang batang tidak
+            berskala linear.
+          </p>
+        </div>
+        <ol class="decay-chart">
+          <li style="--length: 6%; --bin: var(--organik)"><span>Kulit pisang</span><b>2–5 minggu</b></li>
+          <li style="--length: 8%; --bin: var(--kertas)"><span>Kertas</span><b>2–6 minggu</b></li>
+          <li style="--length: 11%; --bin: var(--kertas)"><span>Kardus</span><b>± 2 bulan</b></li>
+          <li style="--length: 15%; --bin: var(--tekstil)"><span>Kaus katun</span><b>2–5 bulan</b></li>
+          <li style="--length: 45%; --bin: var(--tekstil)"><span>Sepatu kulit</span><b>25–40 tahun</b></li>
+          <li style="--length: 58%; --bin: var(--anorganik)"><span>Kaleng aluminium</span><b>80–200 tahun</b></li>
+          <li style="--length: 66%; --bin: var(--anorganik)"><span>Botol plastik</span><b>± 450 tahun</b></li>
+          <li style="--length: 100%; --bin: var(--anorganik)"><span>Botol kaca</span><b>praktis tidak terurai</b></li>
+        </ol>
+      </section>
+
+      <section class="habits" aria-labelledby="habits-title">
+        <h2 id="habits-title">Tiga kebiasaan kecil yang paling berpengaruh</h2>
+        <div class="habit-list">
+          <article>
+            <h3>Bilas sebelum dibuang</h3>
+            <p>
+              Sisa makanan di botol atau kaleng bisa membuat satu karung bahan daur ulang
+              ditolak pengepul.
+            </p>
+          </article>
+          <article>
+            <h3>Jaga kertas tetap kering</h3>
+            <p>
+              Kertas dan kardus yang basah atau berminyak tidak bisa didaur ulang. Simpan
+              terpisah dari sampah dapur.
+            </p>
+          </article>
+          <article>
+            <h3>Pisahkan baterai</h3>
+            <p>
+              Satu baterai yang bocor mencemari tanah dan air di sekitarnya. Kumpulkan di wadah
+              sendiri, lalu serahkan ke titik pengumpulan.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="coba" class="tester" aria-labelledby="coba-title">
+        <div class="tester-head">
+          <h2 id="coba-title">Tidak yakin? Tanyakan ke AI</h2>
+          <p>
+            Arahkan kamera ke satu sampah atau pilih foto. Pengenalan berjalan di perangkat ini;
+            foto Anda tidak dikirim ke mana pun.
+          </p>
+        </div>
+
+        <div class="tester-body">
+          <div class="viewfinder">
+            <video id="camera" playsinline muted hidden></video>
+            <img id="photo" alt="Foto yang dipilih" hidden />
+            <div class="guide" aria-hidden="true"></div>
+            <p id="status" class="status" role="status">Memuat model…</p>
+          </div>
+
+          <div class="tester-side">
+            <div class="actions">
+              <button id="start-camera" class="button" type="button" disabled>
+                Nyalakan kamera
+              </button>
+              <label class="button button-quiet">
+                Pilih foto
+                <input id="pick-photo" type="file" accept="image/*" disabled />
+              </label>
+            </div>
+
+            <div id="result" class="result" aria-live="polite" hidden>
+              <p class="result-label">Buang ke</p>
+              <p id="bin" class="result-bin"></p>
+              <p id="guess" class="result-guess"></p>
+              <p id="tip" class="result-tip"></p>
+              <h3>Tiga tebakan teratas</h3>
+              <ol id="guesses" class="guesses"></ol>
+              <p id="timing" class="timing"></p>
+            </div>
+            <p id="empty" class="empty">
+              Hasil muncul di sini. Paling akurat kalau sampahnya satu, di tengah bingkai, dan
+              cukup terang.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="model" class="model" aria-labelledby="model-title">
+        <h2 id="model-title">Tentang modelnya</h2>
+
+        <div class="model-grid">
+          <div>
+            <h3>Cara kerjanya</h3>
+            <ol class="steps">
+              <li>Bagian tengah gambar dipotong dan diperkecil menjadi 224 × 224 piksel.</li>
+              <li>
+                Jaringan saraf MobileNetV3 menghitung kemungkinan untuk sepuluh jenis sampah.
+              </li>
+              <li>
+                Kalau kemungkinan tertingginya di bawah ambang, jawabannya “tidak yakin”,
+                bukan tebakan.
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3>Seberapa akurat</h3>
+            <dl id="metrics" class="metrics" hidden></dl>
+            <p id="metrics-missing">
+              Angka akurasi ditampilkan di sini setelah model selesai dievaluasi.
+            </p>
+            <p class="note">
+              Dilatih dengan Garbage Dataset v2 (12.259 gambar, lisensi MIT). Foto di dunia
+              nyata lebih berantakan daripada data latih, jadi akurasi sehari-hari lebih
+              rendah daripada angka uji.
+            </p>
+          </div>
+
+          <div>
+            <h3>Kapan model bisa salah</h3>
+            <ul class="plain">
+              <li>Kemasan campuran, misalnya karton minuman berlapis plastik.</li>
+              <li>Beberapa sampah dalam satu bingkai.</li>
+              <li>Cahaya redup atau gambar buram.</li>
+              <li>
+                Benda yang bukan sampah: model hanya mengenal sepuluh jenis dan bisa menebak
+                dengan yakin.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reuse">
+          <h3>Pakai model ini di tempat lain</h3>
+          <p>
+            Modelnya satu berkas ONNX ditambah satu berkas pengaturan, sehingga bisa dijalankan
+            di Python, aplikasi Android atau iOS, Raspberry Pi, atau situs lain.
+          </p>
+          <p class="downloads">
+            <a class="button button-quiet" href="model/waste.onnx" download>Unduh model (ONNX)</a>
+            <a class="button button-quiet" href="model/model.json" download>
+              Unduh pengaturan (JSON)
+            </a>
+          </p>
+          <pre><code>import json, numpy as np, onnxruntime as ort
+from PIL import Image
+
+config = json.load(open("model.json"))
+image = Image.open("foto.jpg").convert("RGB")
+scale = 256 / min(image.size)
+image = image.resize((round(image.width * scale), round(image.height * scale)))
+left, top = (image.width - 224) // 2, (image.height - 224) // 2
+pixels = np.asarray(image.crop((left, top, left + 224, top + 224))) / 255
+pixels = (pixels - config["mean"]) / config["std"]
+batch = pixels.transpose(2, 0, 1)[None].astype(np.float32)
+
+logits = ort.InferenceSession("waste.onnx").run(None, {"input": batch})[0][0]
+print(config["labels"][int(logits.argmax())])</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Pilah adalah proyek belajar klasifikasi gambar. Pembagian tempat sampah di halaman ini
+        bersifat umum; aturan daerah Anda yang berlaku.
+      </p>
+    </footer>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
