@@ -146,6 +146,8 @@ async function classifyPhoto(classify, file) {
     showStatus("");
     const { naturalWidth, naturalHeight } = elements.photo;
     renderResult(await classify(elements.photo, naturalWidth, naturalHeight));
+    // Di HP, hasil berada di bawah foto: gulir sampai terlihat
+    elements.result.scrollIntoView({ block: "nearest", behavior: "smooth" });
   } catch (error) {
     console.error("Foto gagal diproses", error);
     showStatus("Foto ini tidak bisa dibaca. Coba foto lain berformat JPG atau PNG.");

@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const PORT = 8000;
+// Port sendiri, terpisah dari `npm run serve`, supaya tes selalu memakai servernya sendiri
+const PORT = 4173;
 
 export default defineConfig({
   testDir: "e2e",
@@ -29,7 +30,9 @@ export default defineConfig({
     { name: "mobile", use: { ...devices["Pixel 7"] }, grepInvert: /kamera/ },
   ],
   webServer: {
-    command: `python -m http.server ${PORT} --directory web`,
+    // http-server tahan terhadap banyak koneksi paralel; python -m http.server sesekali
+    // membuat satu halaman menggantung saat memuat model
+    command: `npx http-server web -p ${PORT} -c-1 --silent`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
   },

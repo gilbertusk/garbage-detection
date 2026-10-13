@@ -1,5 +1,5 @@
 // Salin berkas pihak ketiga dari node_modules ke web/vendor, supaya situs tidak
-// memuat apa pun dari CDN: ONNX Runtime Web (WASM, satu thread) dan dua font.
+// memuat apa pun dari CDN: ONNX Runtime Web (WASM, satu thread) dan font.
 import { copyFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 
@@ -10,14 +10,9 @@ const COPIES = [
     files: ["ort.wasm.min.mjs", "ort-wasm-simd-threaded.mjs", "ort-wasm-simd-threaded.wasm"],
   },
   {
-    from: join("node_modules", "@fontsource-variable", "bricolage-grotesque", "files"),
+    from: join("node_modules", "@fontsource-variable", "plus-jakarta-sans", "files"),
     to: join("web", "vendor", "fonts"),
-    files: ["bricolage-grotesque-latin-wght-normal.woff2"],
-  },
-  {
-    from: join("node_modules", "@fontsource-variable", "instrument-sans", "files"),
-    to: join("web", "vendor", "fonts"),
-    files: ["instrument-sans-latin-wght-normal.woff2"],
+    files: ["plus-jakarta-sans-latin-wght-normal.woff2"],
   },
 ];
 

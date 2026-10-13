@@ -44,6 +44,8 @@ for (const photo of PHOTOS) {
     await expect(page.locator("#bin")).toHaveText(photo.bin);
     await expect(page.locator("#guess")).toContainText(photo.guess);
     await expect(page.locator("#guesses li")).toHaveCount(3);
+    // Tanpa pesan, bilah status tidak boleh menutupi bagian bawah foto
+    await expect(page.locator("#status")).toBeHidden();
   });
 }
 

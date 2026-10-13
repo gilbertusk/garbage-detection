@@ -9,9 +9,9 @@
     "e2e": "playwright test"
   },
   "devDependencies": {
-    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
-    "@fontsource-variable/instrument-sans": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
     "@playwright/test": "^1.63.0",
+    "http-server": "^14.1.1",
     "onnxruntime-web": "1.22.0"
   }
 }
